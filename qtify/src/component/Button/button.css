@@ -1,0 +1,35 @@
+
+.button{
+    width:170px;
+    height:47px;
+    display:flex;
+    background-color: #121212;
+    border: 1px solid var(--color-black);
+    border-radius: 12px;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.buttonText{
+
+font-family: "Poppins";
+font-weight:600;
+/* font-style: "SemiBold"; */
+font-size:18px;
+line-height:100%;
+letter-spacing: 0.25px;
+/* display:flex; */
+/* align-items: center;
+justify-content: center; */
+color:#34C94B;
+
+}
+
+
+.button:hover{
+    cursor: pointer;
+}
+
+
+
