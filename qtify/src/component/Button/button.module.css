@@ -1,5 +1,5 @@
 
-.button{
+.feedbackButton{
     width:170px;
     height:47px;
     display:flex;
@@ -23,7 +23,6 @@ letter-spacing: 0.25px;
 /* align-items: center;
 justify-content: center; */
 color:#34C94B;
-
 }
 
 

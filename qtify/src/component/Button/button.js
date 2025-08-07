@@ -1,12 +1,10 @@
 import React from "react";
 import { Button, IconButton, Stack,Typography } from "@mui/material";
-import "./button.css"
-
-
+import styles from "./button.module.css";
 
 export default function button({btnText,targetComponent}) {
- return (<button className="button" onClick={targetComponent}>
-         <Typography className="buttonText">{btnText}</Typography>
+ return (<button className={styles.feedbackButton} onClick={targetComponent}>
+         <Typography className={styles.buttonText}>{btnText}</Typography>
          </button>);
  }
 

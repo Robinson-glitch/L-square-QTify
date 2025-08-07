@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Album from "./component/Album/album";
+import Album from "./component/Album/Albumpage"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
