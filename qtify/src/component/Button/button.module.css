@@ -8,12 +8,7 @@
     border-radius: 12px;
     align-items:center;
     justify-content:center;
-}
-
-
-.buttonText{
-
-font-family: "Poppins";
+    font-family: "Poppins";
 font-weight:600;
 /* font-style: "SemiBold"; */
 font-size:18px;
@@ -22,8 +17,14 @@ letter-spacing: 0.25px;
 /* display:flex; */
 /* align-items: center;
 justify-content: center; */
-color:var(--color-primary);
+color:#34C94B;
 }
+
+
+/* .buttonText{
+
+
+} */
 
 
 .feedbackButton:hover{
