@@ -29,15 +29,12 @@ const Carousel = ({ items }) => {
 
   return (
 
-    
     <Box position="relative" sx={{ width: "100%", padding: "20px 0" }}>
       {/* Custom Left Button */}
     <Leftnav ref={prevRef}/>
 
       {/* Custom Right Button */}
      <Rightnav ref={nextRef}/>
-
-
 
       <Swiper
         modules={[Navigation, Pagination]}
@@ -120,7 +117,7 @@ const Carousel = ({ items }) => {
                     color: "#FFFFFF",
                   }}
                 >
-                  <Typography>{album.slug}</Typography>
+                  <Typography>{album.title}</Typography>
                 </Box>
               </Box>
             </SwiperSlide>

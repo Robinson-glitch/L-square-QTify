@@ -99,11 +99,10 @@ return(
     label: { sx: { padding: "0px !important", } }
   }}
    />
-
     </CardContent>
     </Card>
     <Box  sx={{paddingTop:"4px",fontFamily:"Poppins !important",fontWeight:400,fontSize:14,lineHeight:"100%",color:"#FFFFFF",}}>
-       <Typography>{album.slug}</Typography>
+       <Typography>{album.title}</Typography>
     </Box>
     </Box>
     </Grid>))):((!showAllflag)&&AlbumData?.length?(<Carousel items={AlbumData}/>):"null")}
