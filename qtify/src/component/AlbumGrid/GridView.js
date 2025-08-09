@@ -106,8 +106,8 @@ return(
        <Typography>{album.slug}</Typography>
     </Box>
     </Box>
-    </Grid>))):(<Carousel items={AlbumData}/>)}
-</Grid>
+    </Grid>))):((!showAllflag)&&AlbumData?.length?(<Carousel items={AlbumData}/>):"null")}
+    </Grid>
 </Box>);
 }
 

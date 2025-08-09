@@ -18,6 +18,7 @@ letter-spacing: 0.25px;
 /* align-items: center;
 justify-content: center; */
 color:#34C94B;
+cursor:pointer;
 }
 
 
@@ -27,9 +28,7 @@ color:#34C94B;
 } */
 
 
-.feedbackButton:hover{
-    cursor: pointer;
-}
+
 
 
 
