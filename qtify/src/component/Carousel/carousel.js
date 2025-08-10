@@ -3,6 +3,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Albumchipview from "../Chip/Albumchip";
+import Songchipview from "../Chip/Songchip";
 
 import {
   Card,
@@ -21,7 +23,7 @@ import { useRef, useEffect, useState } from "react";
 import LeftIcon from "../../assets/LeftIcon.png";
 import RightIcon from "../../assets/RightIcon.png";
 
-const Carousel = ({ items }) => {
+const Carousel = ({ items ,carouselsongtype}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [swiperReady, setSwiperReady] = useState(false);
@@ -77,34 +79,7 @@ const Carousel = ({ items }) => {
                       padding: "4px 8px 4px 8px !important",
                     }}
                   >
-                    <Chip
-                      label={`${album.follows} Follows`}
-                      sx={{
-                        width: "71px",
-                        height: "23px",
-                        borderRadius: "10px",
-                        backgroundColor: "#121212",
-                        color: "#FFFFFF",
-                        fontFamily: "Poppins",
-                        fontWeight: 400,
-                        padding: 0,
-                        fontSize: "10px",
-                        lineHeight: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        "& .MuiChip-label": {
-                          padding: 0,
-                        },
-                      }}
-                      componentsProps={{
-                        label: {
-                          sx: {
-                            padding: "0px !important",
-                          },
-                        },
-                      }}
-                    />
+                  {carouselsongtype?<Songchipview album={album}/>:<Albumchipview  album={album}/>}
                   </CardContent>
                 </Card>
                 <Box

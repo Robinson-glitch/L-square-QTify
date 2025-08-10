@@ -13,6 +13,7 @@ import {
 import React, { useEffect, useState} from "react";
 import Carousel from "../Carousel/carousel.js"
 import axios from "axios";
+import TabView from "../Tabs/Tab.js"
 
 const GridAlbumView=({fetchurl,headerText})=>{
 
@@ -22,7 +23,6 @@ const GridAlbumView=({fetchurl,headerText})=>{
 
     useEffect(()=>{
     fetchAlbum();
-
 },[]);
 
 const fetchAlbum=async()=>{
@@ -41,7 +41,7 @@ return(
  <Box sx={{mt:"48px"}}>
  <Box sx={{display:"flex",justifyContent:"space-between"}}>
 <Typography sx={{fontFamily:"Poppins",fontWeight:"600",fontStyle:"SemiBold",fontSize:"20px",lineHeight:"100%",color:"#FFFFFF"}}>{headerText}</Typography>
-<Typography onClick={()=>{
+{headerText!=="Songs"?(<Typography onClick={()=>{
   if(showAllflag===true){
     setShowAllflag(false);
     setshowText("Show All")
@@ -50,10 +50,10 @@ return(
     setShowAllflag(true);
     setshowText("Collapse");
   }
-}} sx={{fontFamily:"Poppins",fontWeight:"600",fontStyle:"SemiBold",fontSize:"20px",color:"#FFFFFF"}}>{showText}</Typography>
+}} sx={{fontFamily:"Poppins",fontWeight:"600",fontStyle:"SemiBold",fontSize:"20px",color:"#FFFFFF"}}>{showText}</Typography>):"null"}
 </Box>
 <Grid container sx={{mt:"12px",ml:"12px",gap:"24px"}}>
-{showAllflag&&AlbumData?.length?(AlbumData.map((album,index)=> (
+{headerText==="Songs"&&AlbumData?.length?(<TabView items={AlbumData}/>):showAllflag&&AlbumData?.length?(AlbumData.map((album,index)=> (
   <Grid item key={album.id}>
   <Box sx={{width:"159px" ,height:"232px"}}>
   <Card 

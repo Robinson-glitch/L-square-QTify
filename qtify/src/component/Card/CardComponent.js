@@ -15,6 +15,7 @@ import 'swiper/css/pagination';
 
 const CardComponent=()=>{
 
+
  return(
 <Box sx={{width:"1384px",height:"848px",position:"absolute",left:"32px",Gap:"32px"}}>
  <GridAlbumView
@@ -24,6 +25,10 @@ const CardComponent=()=>{
  <GridAlbumView
 fetchurl="https://qtify-backend-labs.crio.do/albums/new"
 headerText="New Albums"
+  />
+   <GridAlbumView
+fetchurl="https://qtify-backend-labs.crio.do/songs"
+headerText="Songs"
   />
 </Box>
   )
